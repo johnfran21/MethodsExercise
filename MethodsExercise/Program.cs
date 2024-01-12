@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             Madlib();
+
             int added = Add(2, 4);
             Console.WriteLine(added);
 
@@ -20,11 +21,23 @@
             int sum = AddAllSums(2, 4);
             Console.WriteLine(sum);
 
-            int sum2 = AddAllSums (2, 4, 6);
+            int sum2 = AddAllSums(2, 4, 6);
             Console.WriteLine(sum2);
 
             int sum3 = AddAllSums(1, 1, 1, 1, 1);
             Console.WriteLine(sum3);
+
+            Console.WriteLine(Sum(5, 5));
+
+            Console.WriteLine(Sub(4, 1));
+
+            Console.WriteLine(Multi(3, 4));
+
+            Console.WriteLine(ParamSum(2, 4));
+
+            Console.WriteLine(ParamSum(2, 4, 6));
+
+            Console.WriteLine(ParamSum(1, 1, 1, 1, 1));
 
 
         }
@@ -81,6 +94,37 @@
                 sum = sum + number;
             }
 
+            return sum;
+        }
+
+
+        public static int Sum(int numb1, int numb2)
+        {
+            int sum = numb1 + numb2;
+            return sum;
+
+        }
+
+        public static int Sub(int numb1, int numb2)
+        {
+            int sum = numb1 - numb2;
+            return sum;
+
+        }
+
+        public static int Multi(int numb1, int numb2)
+        {
+            int sum = numb1 * numb2;
+            return sum;
+        }
+
+        public static int ParamSum(params int[] sums)
+        {
+            int sum = 0;
+            foreach(int number in sums)
+            {
+                sum += number;
+            }
             return sum;
         }
 
