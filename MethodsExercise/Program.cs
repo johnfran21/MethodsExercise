@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            //Madlib();
+            Madlib();
             int added = Add(2, 4);
             Console.WriteLine(added);
 
@@ -20,10 +20,10 @@
             int sum = AddAllSums(2, 4);
             Console.WriteLine(sum);
 
-            int sum2 = AddAllSums2 (2, 4, 6);
+            int sum2 = AddAllSums (2, 4, 6);
             Console.WriteLine(sum2);
 
-            int sum3 = AddAllSums3(1, 1, 1, 1, 1);
+            int sum3 = AddAllSums(1, 1, 1, 1, 1);
             Console.WriteLine(sum3);
 
 
@@ -83,29 +83,6 @@
 
             return sum;
         }
-
-        public static int AddAllSums2(params int[] nums)
-        {
-            int sum = 0;
-            foreach (int number in nums)
-            {
-                sum = sum + number;
-            }
-
-            return sum;
-        }
-
-        public static int AddAllSums3(params int[] nums)
-        {
-            int sum = 0;
-            foreach (int number in nums)
-            {
-                sum = sum + number;
-            }
-
-            return sum;
-        }
-
 
     }
 }
