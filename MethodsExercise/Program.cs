@@ -17,8 +17,14 @@
             int divided = Divide(18, 2);
             Console.WriteLine(divided);
 
-            int sum = AddAllSums(1, 1, 1, 1, 1);
+            int sum = AddAllSums(2, 4);
             Console.WriteLine(sum);
+
+            int sum2 = AddAllSums2 (2, 4, 6);
+            Console.WriteLine(sum2);
+
+            int sum3 = AddAllSums3(1, 1, 1, 1, 1);
+            Console.WriteLine(sum3);
 
 
         }
@@ -68,6 +74,28 @@
         }
 
         public static int AddAllSums(params int[] nums)
+        {
+            int sum = 0;
+            foreach (int number in nums)
+            {
+                sum = sum + number;
+            }
+
+            return sum;
+        }
+
+        public static int AddAllSums2(params int[] nums)
+        {
+            int sum = 0;
+            foreach (int number in nums)
+            {
+                sum = sum + number;
+            }
+
+            return sum;
+        }
+
+        public static int AddAllSums3(params int[] nums)
         {
             int sum = 0;
             foreach (int number in nums)
